@@ -138,8 +138,9 @@ ZSingleWireSerial::ZSingleWireSerial(Pin& p) : DMASingleWireSerial(p)
     NVIC_SetPriority(SERCOM1_IRQn,1);
     NVIC_SetPriority(SERCOM2_IRQn,1);
     NVIC_SetPriority(SERCOM3_IRQn,1);
-    NVIC_SetPriority(SERCOM4_IRQn,1);
-    NVIC_SetPriority(SERCOM5_IRQn,1);
+    //TODO: SAMD21E18A doesn't have, needs to be fixed properly
+    //NVIC_SetPriority(SERCOM4_IRQn,1);
+    //NVIC_SetPriority(SERCOM5_IRQn,1);
 #else
     // SAMD51 has many more IRQs for SERCOMs
 #endif
